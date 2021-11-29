@@ -28,7 +28,8 @@ function NavbarUserDropdown() {
     setAnchorMenu(event.currentTarget);
   };
 
-  const closeMenu = () => {
+  const closeMenu: (link: string) => void = (link) => {
+    navigate(link);
     setAnchorMenu(null);
   };
 
@@ -56,7 +57,10 @@ function NavbarUserDropdown() {
         open={Boolean(anchorMenu)}
         onClose={closeMenu}
       >
-        <MenuItem onClick={closeMenu}>Profile</MenuItem>
+        <MenuItem onClick={() => closeMenu("/pages/profile")}>Profile</MenuItem>
+        <MenuItem onClick={() => closeMenu("/pages/settings")}>
+          Settings
+        </MenuItem>
         <MenuItem onClick={handleSignOut}>Sign out</MenuItem>
       </Menu>
     </React.Fragment>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components/macro";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import { green, grey, indigo } from "@mui/material/colors";
 import { Alert } from "@mui/lab";
 import { Palette as PaletteIcon } from "@mui/icons-material";
 import {
   Box,
-  Button,
+  // Button,
   Drawer,
   Fab as MuiFab,
   Grid,
@@ -135,12 +135,12 @@ function Demo({ title, themeVariant }: DemoTypes) {
 function Demos() {
   return (
     <Wrapper>
-      <Heading>Select a demo</Heading>
+      <Heading>Select a theme</Heading>
 
       <Box px={4} my={3}>
         <Alert icon={false} severity="info">
           <strong>Hello!</strong> Select your style below. Choose the ones that
-          best fits your needs.
+          best fits you.
         </Alert>
       </Box>
 
@@ -155,7 +155,7 @@ function Demos() {
         </Grid>
       </Box>
 
-      <Box my={3} mx={4}>
+      {/*<Box my={3} mx={4}>
         <Button
           component={Link}
           to="/documentation/welcome"
@@ -178,7 +178,7 @@ function Demos() {
         >
           Get Material App
         </Button>
-      </Box>
+      </Box>*/}
     </Wrapper>
   );
 }

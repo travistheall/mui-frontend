@@ -3,11 +3,11 @@ import styled from "styled-components/macro";
 import { NavLink } from "react-router-dom";
 
 import { spacing } from "@mui/system";
-import { green } from "@mui/material/colors";
+// import { green } from "@mui/material/colors";
 
 import {
   Box as MuiBox,
-  Chip,
+  // Chip,
   Drawer as MuiDrawer,
   ListItemButton,
 } from "@mui/material";
@@ -60,7 +60,7 @@ const BrandIcon = styled(Logo)`
   height: 32px;
 `;
 
-const BrandChip = styled(Chip)`
+/*const BrandChip = styled(Chip)`
   background-color: ${green[700]};
   border-radius: 5px;
   color: ${(props) => props.theme.palette.common.white};
@@ -74,7 +74,7 @@ const BrandChip = styled(Chip)`
     padding-left: ${(props) => props.theme.spacing(1.375)};
     padding-right: ${(props) => props.theme.spacing(1.375)};
   }
-`;
+`;*/
 
 export type SidebarProps = {
   PaperProps: {
@@ -100,10 +100,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <Drawer variant="permanent" {...rest}>
       <Brand component={NavLink} to="/">
-        <BrandIcon />{" "}
-        <Box ml={1}>
-          Material App <BrandChip label="PRO" />
-        </Box>
+        <BrandIcon /> <Box ml={1}>TNTheall {/*<BrandChip label="PRO" />*/}</Box>
       </Brand>
       <SidebarNav items={items} />
       {!!showFooter && <Footer />}

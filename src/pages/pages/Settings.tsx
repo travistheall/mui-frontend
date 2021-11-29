@@ -18,6 +18,7 @@ import {
 } from "@mui/material";
 import { CloudUpload as MuiCloudUpload } from "@mui/icons-material";
 import { spacing, SpacingProps } from "@mui/system";
+import SettingsFAB from "../../components/Settings";
 
 const Breadcrumbs = styled(MuiBreadcrumbs)(spacing);
 
@@ -32,6 +33,7 @@ const TextField = styled(MuiTextField)<{ my?: number }>(spacing);
 interface ButtonProps extends SpacingProps {
   component?: string;
 }
+
 const Button = styled(MuiButton)<ButtonProps>(spacing);
 
 const CloudUpload = styled(MuiCloudUpload)(spacing);
@@ -234,6 +236,7 @@ function Settings() {
           <Private />
         </Grid>
       </Grid>
+      <SettingsFAB />
     </React.Fragment>
   );
 }

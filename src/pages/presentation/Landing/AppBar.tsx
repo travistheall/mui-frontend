@@ -8,7 +8,7 @@ import {
   Button as MuiButton,
   Container,
   Grid,
-  Hidden,
+  // Hidden,
   Toolbar,
 } from "@mui/material";
 
@@ -54,43 +54,14 @@ const AppBarComponent: React.FC = () => (
             </Grid>
             <Grid item xs />
             <Grid item>
-              <Hidden mdDown>
-                <Button
-                  ml={2}
-                  color="inherit"
-                  component={Link}
-                  to="/dashboard/analytics"
-                  target="_blank"
-                >
-                  Live Preview
-                </Button>
-                <Button
-                  ml={2}
-                  color="inherit"
-                  component={Link}
-                  to="/documentation/welcome"
-                  target="_blank"
-                >
-                  Documentation
-                </Button>
-                <Button
-                  ml={2}
-                  color="inherit"
-                  component={Link}
-                  to="/documentation/support"
-                  target="_blank"
-                >
-                  Support
-                </Button>
-              </Hidden>
               <Button
                 ml={2}
                 color="primary"
                 variant="contained"
-                href="https://material-ui.com/store/items/material-app/"
-                target="_blank"
+                component={Link}
+                to="/dashboard/analytics"
               >
-                Get Material App
+                Home
               </Button>
             </Grid>
           </Grid>
