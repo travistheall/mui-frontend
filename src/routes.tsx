@@ -46,6 +46,7 @@ import TextFields from "./pages/forms/TextFields";
 import MaterialIcons from "./pages/icons/MaterialIcons";
 
 // Page components
+import About from "./pages/pages/About";
 import Blank from "./pages/pages/Blank";
 import InvoiceDetails from "./pages/pages/InvoiceDetails";
 import InvoiceList from "./pages/pages/InvoiceList";
@@ -54,6 +55,11 @@ import Pricing from "./pages/pages/Pricing";
 import Settings from "./pages/pages/Settings";
 import Projects from "./pages/pages/Projects";
 import Chat from "./pages/pages/Chat";
+import Cloud from "./pages/pages/Cloud";
+import Data from "./pages/pages/Data";
+import PY from "./pages/pages/PY";
+import SQL from "./pages/pages/SQL";
+import JS from "./pages/pages/JS";
 
 // Table components
 import SimpleTable from "./pages/tables/SimpleTable";
@@ -163,6 +169,48 @@ const routes = [
       {
         path: "blank",
         element: <Blank />,
+      },
+    ],
+  },
+  {
+    path: "dev",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "py",
+        element: <PY />,
+      },
+      {
+        path: "js",
+        element: <JS />,
+      },
+      {
+        path: "sql",
+        element: <SQL />,
+      },
+    ],
+  },
+  {
+    path: "aws",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "cloud",
+        element: <Cloud />,
+      },
+      {
+        path: "data",
+        element: <Data />,
+      },
+    ],
+  },
+  {
+    path: "about",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <About />,
       },
     ],
   },

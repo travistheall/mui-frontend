@@ -13,11 +13,16 @@ import {
   Map,
   ShoppingCart,
   PieChart,
-  */
   Briefcase,
+  Code,
+  */
   Sliders,
   Users,
+  User,
+  Cloud,
 } from "react-feather";
+import { FaAws, FaPython } from "react-icons/fa";
+import { AiOutlineConsoleSql, SiJavascript } from "react-icons/all";
 
 const pagesSection = [
   {
@@ -44,8 +49,8 @@ const pagesSection = [
     ],
   },
   {
-    href: "/projects",
-    icon: Briefcase,
+    href: "/about",
+    icon: User,
     title: "About Me",
   },
   {
@@ -77,10 +82,49 @@ const pagesSection = [
   },
 ] as SidebarItemsType[];
 
+const awsSection = [
+  {
+    href: "/aws/cloud",
+    icon: Cloud,
+    title: "Cloud Practitioner",
+  },
+  {
+    href: "/aws/data",
+    icon: FaAws,
+    title: "Data Analytics",
+  },
+] as SidebarItemsType[];
+
+const devSection = [
+  {
+    href: "/dev/sql",
+    icon: AiOutlineConsoleSql,
+    title: "SQL",
+  },
+  {
+    href: "/dev/py",
+    icon: FaPython,
+    title: "Python",
+  },
+  {
+    href: "/dev/js",
+    icon: SiJavascript,
+    title: "Javascript",
+  },
+] as SidebarItemsType[];
+
 const navItems = [
   {
     title: "Pages",
     pages: pagesSection,
+  },
+  {
+    title: "AWS",
+    pages: awsSection,
+  },
+  {
+    title: "Code",
+    pages: devSection,
   },
 ];
 
